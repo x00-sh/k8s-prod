@@ -14,6 +14,8 @@ resources:
   - ./kubernetes-dashboard.yaml
   - ./metallb.yaml
   - ./metrics-server.yaml
+  - ./piraeus.yaml
   - ./prometheus-community.yaml
   - ./stakater.yaml
+  - ./synology-csi.yaml
   - ./weave-gitops.yaml
