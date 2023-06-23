@@ -34,7 +34,7 @@ spec:
       repository: ghcr.io/twin/gatus
       tag: v5.4.0
     env:
-      TZ: America/New_York
+      TZ: Europe/Copenhagen
       GATUS_CONFIG_PATH: /config
       CUSTOM_WEB_PORT: &port 80
     service:
@@ -56,9 +56,9 @@ spec:
         enabled: true
         ingressClassName: nginx
         annotations:
-          external-dns.alpha.kubernetes.io/target: ingress.x00.sh
+          external-dns.alpha.kubernetes.io/target: "ingress.${SECRET_DOMAIN}"
         hosts:
-          - host: &host status.x00.sh
+          - host: &host "status.${SECRET_DOMAIN}"
             paths:
               - path: /
                 pathType: Prefix
