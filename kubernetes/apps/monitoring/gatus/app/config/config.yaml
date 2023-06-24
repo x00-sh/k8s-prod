@@ -6,9 +6,6 @@ debug: false
 ui:
   title: Status | Gatus
   header: Status
-alerting:
-  slack:
-    webhook-url: ""
 
 connectivity:
   checker:
