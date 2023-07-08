@@ -60,6 +60,12 @@ spec:
           location: '/volume1'
           protocol: iscsi
         isDefault: true
+      synology-media:
+        parameters:
+          dsm: "${SYNOLOGY_ADDR}"
+          fstype: ext4
+          location: '/volume1/media'
+          protocol: nfs4
     volumeSnapshotClasses:
       synology-iscsi-delete:
         deletionPolicy: Delete
