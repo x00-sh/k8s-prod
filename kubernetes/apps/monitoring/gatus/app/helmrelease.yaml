@@ -37,6 +37,11 @@ spec:
       TZ: Europe/Copenhagen
       GATUS_CONFIG_PATH: /config
       CUSTOM_WEB_PORT: &port 80
+      SLACK_WEBHOOK_URL:
+        valueFrom:
+          secretKeyRef:
+            name: gatus-slack-webhook-url
+            key: SLACK_WEBHOOK_URL
     service:
       main:
         ports:
