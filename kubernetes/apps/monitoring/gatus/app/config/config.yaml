@@ -12,6 +12,10 @@ connectivity:
     target: 1.1.1.1:53
     interval: 1m
 
+alerting:
+  slack:
+    webhook-url: ${SLACK_WEBHOOK_URL}
+
 endpoints:
   - name: status
     group: external
@@ -19,6 +23,32 @@ endpoints:
     interval: 1m
     client:
       dns-resolver: tcp://1.1.1.1:53
+    conditions:
+      - "[STATUS] == 200"
+    alerts:
+      - type: slack
+        failure-threshold: 5
+        description: "Healthcheck failed 5 times in a row"
+        send-on-resolved: true
+
+  - name: homeassistant
+    group: external
+    url: https://homeassistant.x00.sh
+    interval: 1m
+    client:
+      dns-resolver: tcp://1.1.1.1:53
+    conditions:
+      - "[STATUS] == 200"
+    alerts:
+      - type: slack
+        failure-threshold: 5
+        description: "Healthcheck failed 5 times in a row"
+        send-on-resolved: true
+
+  - name: homeassistant
+    group: internal
+    url: http://10.0.0.4:8443/
+    interval: 1m
     conditions:
       - "[STATUS] == 200"
     alerts:
