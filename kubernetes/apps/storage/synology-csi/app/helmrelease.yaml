@@ -51,13 +51,15 @@ spec:
         parameters:
           dsm: "${SYNOLOGY_ADDR}"
           fstype: ext4
-          location: '/volume1'
+          type: thin
+          # location: '/volume1'
           protocol: iscsi
       synology-iscsi-retain:
         parameters:
           dsm: "${SYNOLOGY_ADDR}"
           fstype: ext4
-          location: '/volume1'
+          type: thin
+          # location: '/volume1'
           protocol: iscsi
         isDefault: true
       synology-media:
