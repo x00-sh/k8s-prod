@@ -49,14 +49,14 @@ spec:
     storageClasses:
       synology-iscsi-delete:
         parameters:
-          dsm: "${SYNOLOGY_ADDR}"
+          dsm: "10.0.0.20"
           fstype: ext4
           type: thin
           # location: '/volume1'
           protocol: iscsi
       synology-iscsi-retain:
         parameters:
-          dsm: "${SYNOLOGY_ADDR}"
+          dsm: "10.0.0.20"
           fstype: ext4
           type: thin
           # location: '/volume1'
@@ -64,7 +64,7 @@ spec:
         isDefault: true
       synology-media:
         parameters:
-          dsm: "${SYNOLOGY_ADDR}"
+          dsm: "10.0.0.20"
           fstype: ext4
           location: '/volume1/media'
           protocol: nfs4
