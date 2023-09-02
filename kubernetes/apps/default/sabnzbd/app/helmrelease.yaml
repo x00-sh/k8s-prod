@@ -26,9 +26,9 @@ spec:
       retries: 3
   uninstall:
     keepHistory: false
-  dependsOn:
-    - name: synology-csi
-      namespace: storage
+#  dependsOn:
+#    - name: synology-csi
+#      namespace: storage
   values:
     controller:
       type: statefulset
@@ -46,7 +46,7 @@ spec:
         sabnzbd.default.svc,
         sabnzbd.default.svc.cluster,
         sabnzbd.default.svc.cluster.local,
-        sabnzbd.x00.sh
+        sabnzbd.${SECRET_DOMAIN}
     service:
       main:
         ports:
@@ -77,7 +77,7 @@ spec:
             sub_filter '</head>' '<link rel="stylesheet" type="text/css" href="https://theme-park.devbu.io/css/base/sabnzbd/nord.css"></head>';
             sub_filter_once on;
         hosts:
-          - host: &host "{{ .Release.Name }}.x00.sh"
+          - host: &host "{{ .Release.Name }}.${SECRET_DOMAIN}"
             paths:
               - path: /
                 pathType: Prefix
