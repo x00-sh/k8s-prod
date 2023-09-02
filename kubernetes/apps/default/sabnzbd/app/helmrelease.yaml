@@ -95,7 +95,7 @@ spec:
         mountPath: /config
         accessMode: ReadWriteOnce
         size: 1Gi
-        storageClass: local-path
+        storageClass: synology-iscsi-retain
     # Note: If downloading very large nzbs it might be worth using NFS for your download directory.
     persistence:
       media:
