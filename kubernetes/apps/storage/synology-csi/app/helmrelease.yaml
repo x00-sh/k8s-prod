@@ -48,23 +48,28 @@ spec:
         tag: v6.2.1
     storageClasses:
       synology-iscsi-delete:
+        isDefault: false
+        reclaimPolicy: Delete
+        volumeBindingMode: Immediate
         parameters:
-          dsm: "10.0.0.20"
+          dsm: ${SYNOLOGY_HOST}
           fstype: ext4
           type: thin
           # location: '/volume1'
           protocol: iscsi
       synology-iscsi-retain:
+        reclaimPolicy: Retain
+        volumeBindingMode: Immediate
+        isDefault: true
         parameters:
-          dsm: "10.0.0.20"
+          dsm: ${SYNOLOGY_HOST}
           fstype: ext4
           type: thin
           # location: '/volume1'
           protocol: iscsi
-        isDefault: true
       synology-media:
         parameters:
-          dsm: "10.0.0.20"
+          dsm: ${SYNOLOGY_HOST}
           fstype: ext4
           location: '/volume1/media'
           protocol: nfs4
