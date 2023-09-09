@@ -7,4 +7,5 @@ resources:
   - ./hajimari/ks.yaml
 #  - ./sabnzbd/ks.yaml
   - ./theme-park/ks.yaml
+  - ./k8sgpt/ks.yaml
   - ./kubernetes-schemas/ks.yaml
