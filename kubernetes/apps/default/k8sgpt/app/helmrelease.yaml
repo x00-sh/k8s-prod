@@ -8,7 +8,7 @@ spec:
   interval: 15m
   chart:
     spec:
-      chart: k8sgpt-operator
+      chart: k8sgpt/k8sgpt-operator
       version: 0.0.21
       sourceRef:
         kind: HelmRepository
