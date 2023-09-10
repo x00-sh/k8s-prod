@@ -2,7 +2,7 @@ apiVersion: core.k8sgpt.ai/v1alpha1
 kind: K8sGPT
 metadata:
   name: k8sgpt
-  namespace: k8sgpt-operator-system
+  namespace: default
 spec:
   ai:
     enabled: true
