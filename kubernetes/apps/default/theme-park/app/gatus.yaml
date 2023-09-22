@@ -3,7 +3,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: theme-park-gatus-ep
-  namespace: default
+  namespace: shared
   labels:
     gatus.io/enabled: "true"
 data:
