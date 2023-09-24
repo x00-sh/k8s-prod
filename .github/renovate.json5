@@ -46,7 +46,8 @@
       "description": "Process various other dependencies",
       "fileMatch": [
         "ansible/.+\\.ya?ml(\\.j2)?$",
-        "kubernetes/.+\\.ya?ml$"
+        "kubernetes/.+\\.ya?ml$",
+        ".github/workflows/checkov.yaml"
       ],
       "matchStrings": [
         "datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( registryUrl=(?<registryUrl>\\S+))?\n.*?\"(?<currentValue>.*)\"\n"
