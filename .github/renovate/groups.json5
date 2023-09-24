@@ -5,7 +5,7 @@
       "description": "Flux Group",
       "groupName": "Flux",
       "matchPackagePatterns": ["flux"],
-      "matchDatasources": ["docker", "github-tags"],
+      "matchDatasources": ["docker", "github-tags", "github-releases"],
       "versioning": "semver",
       "group": {
         "commitMessageTopic": "{{{groupName}}} group"
