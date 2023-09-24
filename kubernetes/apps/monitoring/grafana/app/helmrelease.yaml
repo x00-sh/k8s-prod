@@ -32,6 +32,7 @@ spec:
       namespace: networking
   values:
     admin:
+      #checkov:skip=CKV_SECRET_6:This secret is encrypted
       existingSecret: grafana-admin-secret
     env:
       GF_EXPLORE_ENABLED: true
